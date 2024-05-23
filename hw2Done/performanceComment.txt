@@ -1,0 +1,31 @@
+comparing values for the thousand samples, in general the variance for the particle filter algo was 
+lower than the variance for the likleyhood weigting algo. The particle filter algo also got closer to the true probablities, 
+this is a result of the particle filter reforming a distrubtion with each of particles and then sampling from that new distrubtion to 
+generate the next round of particles. It is able to better approximate the full distrubtion when compared to LW.
+
+Sequence 1: 
+PF algo 
+average: 0.23146977302928837
+var: 0.010273131201660991
+
+LW algo 
+average: 0.6617386083615695
+var: 0.01787840654502001
+
+Sequence 2: 
+PF algo 
+average: 0.9052664120442303
+var: 0.0050312471524858165
+
+LW algo 
+average: 0.6631087875831705
+var: 0.02891322241393061
+
+Sequence 3: 
+PF algo 
+average: 0.8709539527268229
+var: 0.003778081230628615
+
+LW algo 
+average: 0.7140485757457616
+var: 0.008488733172669578

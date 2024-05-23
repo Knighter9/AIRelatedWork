@@ -1,0 +1,133 @@
+1. Value iteration results
+
+$ python3 mdpVI.py                                                                                             16:30:24
+----------------------------------------------------
+output for value iteration with params (-2, 0.9)
+State: (1, 1), val: -3.0514926010225425, policy: up
+State: (1, 2), val: -0.8078741742648561, policy: up
+State: (1, 3), val: 1.8577098725883507, policy: right
+State: (2, 1), val: -2.1686795408094994, policy: right
+State: (2, 3), val: 5.2267109404105, policy: right
+State: (3, 1), val: 0.3079009060173786, policy: up
+State: (3, 2), val: 3.830672847532406, policy: up
+State: (3, 3), val: 8.730431946440158, policy: right
+State: (4, 1), val: -2.8333004284273655, policy: left
+State: (4, 2), val: -9.999916647515823, policy: NA
+State: (4, 3), val: 9.999916647515823, policy: NA
+----------------------------------------------------
+----------------------------------------------------
+output for value iteration with params (-0.2, 0.9)
+State: (1, 1), val: 4.587181682454209, policy: up
+State: (1, 2), val: 5.5822857276050275, policy: up
+State: (1, 3), val: 6.635391983051275, policy: right
+State: (2, 1), val: 3.945525666051915, policy: right
+State: (2, 3), val: 7.96640028673407, policy: right
+State: (3, 1), val: 4.771301280498433, policy: up
+State: (3, 2), val: 6.1016017090547425, policy: up
+State: (3, 3), val: 9.350633701975335, policy: right
+State: (4, 1), val: 2.4784009667664355, policy: left
+State: (4, 2), val: -9.999916647515823, policy: NA
+State: (4, 3), val: 9.999916647515823, policy: NA
+----------------------------------------------------
+----------------------------------------------------
+output for value iteration with params (-0.01, 0.9)
+State: (1, 1), val: 5.407851054450954, policy: up
+State: (1, 2), val: 6.256802606135739, policy: up
+State: (1, 3), val: 7.139702872489028, policy: right
+State: (2, 1), val: 4.736160181976276, policy: left
+State: (2, 3), val: 8.25558971773489, policy: right
+State: (3, 1), val: 5.256512352112594, policy: up
+State: (3, 2), val: 6.341310866659878, policy: up
+State: (3, 3), val: 9.416099442837382, policy: right
+State: (4, 1), val: 3.050216310033905, policy: left
+State: (4, 2), val: -9.999916647515823, policy: NA
+State: (4, 3), val: 9.999916647515823, policy: NA
+
+
+2. Output for policy iteration
+
+$ python3 mdpPI.py                                                                                             16:32:14
+----------------------------------------------------
+output for policy iteration with params (-2, 0.9)
+State: (1, 1), val: -3.051416476886305, policy: up
+State: (1, 2), val: -0.8077952729827622, policy: up
+State: (1, 3), val: 1.8577887752322593, policy: right
+State: (2, 1), val: -2.168621085671812, policy: right
+State: (2, 3), val: 5.226790829549925, policy: right
+State: (3, 1), val: 0.30795936115506584, policy: up
+State: (3, 2), val: 3.8307346464447587, policy: up
+State: (3, 3), val: 8.730511835579584, policy: right
+State: (4, 1), val: -2.8332628779732394, policy: left
+State: (4, 2), val: -9.999999570420037, policy: NO POLICY For TERM States
+State: (4, 3), val: 9.999999570420037, policy: NO POLICY For TERM States
+----------------------------------------------------
+----------------------------------------------------
+output for policy iteration with params (-0.2, 0.9)
+State: (1, 1), val: 4.58725852995975, policy: up
+State: (1, 2), val: 5.582365039212962, policy: up
+State: (1, 3), val: 6.635471294659208, policy: right
+State: (2, 1), val: 3.9455844240149203, policy: right
+State: (2, 3), val: 7.9664805897371025, policy: right
+State: (3, 1), val: 4.771360038461438, policy: up
+State: (3, 2), val: 6.101663828114754, policy: up
+State: (3, 3), val: 9.350714004978368, policy: right
+State: (4, 1), val: 2.4784387117497113, policy: left
+State: (4, 2), val: -9.999999999999984, policy: NO POLICY For TERM States
+State: (4, 3), val: 9.999999999999984, policy: NO POLICY For TERM States
+----------------------------------------------------
+----------------------------------------------------
+output for policy iteration with params (-0.01, 0.9)
+State: (1, 1), val: 5.40792880644135, policy: up
+State: (1, 2), val: 6.25688191771565, policy: up
+State: (1, 3), val: 7.139782184068953, policy: right
+State: (2, 1), val: 4.736229480738858, policy: left
+State: (2, 3), val: 8.255670020709568, policy: right
+State: (3, 1), val: 5.256572093129815, policy: up
+State: (3, 2), val: 6.341372985697955, policy: up
+State: (3, 3), val: 9.416179745812057, policy: right
+State: (4, 1), val: 3.05025479721896, policy: left
+State: (4, 2), val: -9.99999999997055, policy: NO POLICY For TERM States
+State: (4, 3), val: 9.99999999997055, policy: NO POLICY For TERM States
+
+
+3. Output for monte carlo on policy first visit epislon soft policy
+
+$ python3 mdpMC.py                                                                                             20:34:17
+----------------------------------------------------
+output for monte carlo with params (-2, 0.9, and 0.1)
+state:             action-values q(s,a),           policy
+(1, 1): up=-6.221900000000001, down=-15.098422343401353, left=-14.9273406326342, right=-6.60955548940934  policy=up
+(1, 2): up=-4.9792271233693155, down=-7.577840000000001, left=-15.047111749434869, right=-14.649740018218248  policy=up
+(1, 3): up=-4.911011730491668, down=-8.086130502412717, left=-5.436964036931226, right=-3.048187485726774  policy=right
+(2, 1): up=-11.217817453785015, down=-8.109953766533327, left=-16.033481083478154, right=-4.826347997784101  policy=right
+(2, 3): up=-3.3080718633484953, down=-3.2959222126582692, left=-4.800735350723307, right=-1.323277126844053  policy=right
+(3, 1): up=-2.997290937303337, down=-4.753574882352951, left=-7.130640014574695, right=-3.0290488321167817  policy=up
+(3, 2): up=-1.293363636363633, down=-4.8209519605769335, left=-3.6830229896218376, right=-1.0  policy=right
+(3, 3): up=-1.404933634934064, down=-3.0371214554539727, left=-3.355391589787338, right=1.0  policy=right
+(4, 1): up=-1.0, down=-12.11003077403706, left=-4.9178, right=-7.453340410295375  policy=up
+----------------------------------------------------
+----------------------------------------------------
+output for monte carlo with params (-0.2, 0.9, and 0.1)
+state:             action-values q(s,a),           policy
+(1, 1): up=-0.11649897006065565, down=0, left=-1.0277854402777449, right=-0.15036019727904623  policy=down
+(1, 2): up=0.11868286932120513, down=-1.1356146868209611, left=-0.11577979216840519, right=-0.12362242377772943  policy=up
+(1, 3): up=0.11058494042195631, down=-0.11850402727645704, left=0.1168658849632356, right=0.376657611863704  policy=right
+(2, 1): up=-0.20138491539108583, down=-0.15489427899389022, left=-1.1740696295859387, right=0.07873745787185736  policy=right
+(2, 3): up=0.36645569070949563, down=0.3725710812809287, left=0.10650122173221674, right=0.6643593467651083  policy=right
+(3, 1): up=0.34133488271457496, down=0.07226132177576763, left=-0.19210739164915727, right=-0.16815029812497378  policy=up
+(3, 2): up=0.6629355723686081, down=0.08411184790371888, left=0.3399546705882396, right=-1.0  policy=up
+(3, 3): up=0.6632682699796681, down=0.32987019730537115, left=0.3726116780219642, right=1.0  policy=right
+(4, 1): up=-1.0, down=-0.27054067237142876, left=0.07871471163617358, right=-0.16870099057142854  policy=left
+----------------------------------------------------
+----------------------------------------------------
+output for monte carlo with params (-0.01, 0.9, and 0.1)
+state:             action-values q(s,a),           policy
+(1, 1): up=0.5707490421320002, down=-0.057974001490225024, left=0.2982346073426534, right=0.4846693975322751  policy=up
+(1, 2): up=0.6981717765771996, down=0.34541123394994344, left=0.2313474166551719, right=0.5458163065491223  policy=up
+(1, 3): up=0.696449857142859, down=0.6176724615384599, left=0.696247262295085, right=0.7887049258046674  policy=right
+(2, 1): up=0.2372738985125083, down=0.5735960000000001, left=0.35175175759275046, right=0.5789921772859588  policy=right
+(2, 3): up=0.7803184531122498, down=0.7803647830540149, left=0.6964112164148802, right=0.878275745493898  policy=right
+(3, 1): up=0.7451123135494901, down=0.4467299637264947, left=0.4084707568984828, right=0.4542304975357144  policy=up
+(3, 2): up=0.8771601071183789, down=0.6660656839378216, left=0.7451525470851993, right=-1.0  policy=up
+(3, 3): up=0.8728787873649341, down=0.7365726625761829, left=0.7729178306264521, right=1.0  policy=right
+(4, 1): up=-1.0, down=-0.5124408529393757, left=0.6602294207975443, right=-0.5030973176484996  policy=left
